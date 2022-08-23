@@ -1,0 +1,36 @@
+@import "variables";
+
+.contenedorTalles {
+    background-color:map-get($colores, Negro);
+    display: grid;
+    grid-template-areas:
+    "titulotalles titulotalles titulotalles"
+    "tallesImg tallesImg tallesImg";
+
+    justify-items: center;
+    justify-content: center;
+    animation: fadeIn 0.1s;
+    animation-timing-function: ease;
+
+
+}
+
+.tituloTalles {
+    padding: 15px;
+    grid-area: titulotalles;
+    font-family: Inter;
+    font-size: 30px;
+    color: map-get($colores, Blanco);
+    text-align: center;
+    left: auto;
+    right: auto;
+}
+
+.talles {
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+    background-color: map-get($colores, Blanco);
+    grid-area: tallesImg;
+
+}

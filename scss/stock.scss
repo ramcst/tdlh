@@ -1,0 +1,110 @@
+@import "variables";
+
+
+
+.stockBody{
+    background-color: map-get($map: $colores, $key:Blanco );
+
+}
+.stockImagen {
+    @include tamaño (400px, 400px);
+    padding: 5px;
+    border-radius: 25px;
+    background-color: map-get($colores, Blanco);
+
+
+
+}
+
+.contenedorStock {
+    display: grid;
+    grid-template-areas:
+    "titulostock titulostock titulostock"
+    "fila1 fila1 fila1"
+    "fila2 fila2 fila2"
+    ;
+
+    justify-items: center;
+    justify-content: center;
+    animation: fadeIn 0.1s;
+    animation-timing-function: ease;
+
+
+}
+
+.tituloStock {
+    grid-area: titulostock;
+    font-family: Inter;
+    font-size: 30px;
+    color: map-get($colores, Negro);
+    text-align: center;
+    left: auto;
+    right: auto;
+    padding: 10px;
+    p {
+        padding: 8px;
+        font-size: 18px;
+    }
+}
+
+.fila1 {
+    grid-area: fila1;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    text-align: center;
+    border-radius: 25px;
+    background-color: map-get($colores, Blanco);
+    a {
+        text-decoration: none;
+    }
+    h2 {
+        color: map-get($colores, Negro);
+        margin-top: 2px;
+        margin-bottom: 0px;
+        font-family: inter;
+    }
+    h3 {
+        margin-top: 5px;
+        font-family: inter;
+        color: map-get($colores, Gris);
+
+    }
+        
+}
+
+.fila2 {
+    grid-area: fila1;
+    display: flex;
+    flex-direction: row;
+    justify-items: center;
+    text-align: center;
+    border-radius: 25px;
+    background-color: map-get($colores, Blanco);
+    a {
+        text-decoration: none;
+    }
+    h2 {
+        color: map-get($colores, Negro);
+        margin-top: 2px;
+        margin-bottom: 0px;
+        font-family: inter;
+    }
+    h3 {
+        margin-top: 5px;
+        font-family: inter;
+        color: map-get($colores, Gris);
+
+    }
+}
+
+.fila1 img:hover{
+    filter: blur(2px);
+
+}
+
+
+.fila2 img:hover{
+    filter: blur(2px);
+
+}

@@ -1,0 +1,93 @@
+@import "variables";
+
+
+
+body{
+    background-color: map-get($colores, Negro);
+
+}
+
+.contenedorIndex {
+    padding: 5%;
+    display: grid;
+    grid-template-areas:
+    "logo logo logo"
+    "parrafo parrafo parrafo"
+    "navegacion navegacion navegacion"
+    "instagram instagram instagram"
+    "link link link"
+    "footer footer footer";
+
+    justify-items: center;
+    justify-content: center;
+    animation: fadeIn 0.1s;
+    animation-timing-function: ease;
+
+    div{
+        padding: 5px;
+        color: map-get($colores, Blanco);
+        
+    
+    
+    }
+}
+
+.imagenLogo {
+    @include tamaño (362px, 1122px);
+
+}
+
+.logo {
+    grid-area: logo;
+}
+
+.navegacion {
+    grid-area: navegacion;
+    nav {
+        background-color: map-get($colores, Negro);
+        font-family: Inter;
+        margin-top: 10px;
+    
+        
+        ul{
+            background-color:  map-get($colores, Negro);
+            list-style: none;
+            text-align: center;
+        }   
+        
+            li{
+                text-decoration: map-get($colores, Blanco);
+                display: inline;
+                vertical-align: middle;
+                margin: 20px;
+            }
+        
+                a{
+                    color: map-get($colores, Blanco);
+                    text-decoration: none;
+                }
+    }
+
+}
+
+.navegacion  li:hover {
+    font-weight: bold;
+}
+
+.parrafo {
+    grid-area: parrafo;
+    font-size: 15px;
+    font-family: Inter;
+    text-align: center;
+}
+
+
+
+.instagram {
+    grid-area: instagram;
+}
+
+.link {
+    grid-area: link;
+    font-family: Inter;
+}

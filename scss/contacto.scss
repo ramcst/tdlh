@@ -1,0 +1,52 @@
+.contenedorContacto{
+    background-color:map-get($colores, Negro);
+    display: grid;
+    grid-template-areas:
+    "contacto contacto contacto"
+    "locales locales locales"
+    "mapa1 mapa1 mapa1"
+    "mapa2 mapa2 mapa2";
+
+    justify-items: center;
+    justify-content: center;
+
+}
+
+.mapaContacto {
+    @include tamaño(450px, 600px);
+    padding: 5px;
+    background-color: map-get($colores, Blanco);
+}
+
+
+.contactoTitulo {
+    padding: 15px;
+    grid-area: contacto;
+    font-family: Inter;
+    font-size: 30px;
+    color: map-get($colores, Blanco);
+    text-align: center;
+    left: auto;
+    right: auto;
+    
+}
+
+.locales {
+    grid-area: locales;
+    font-family: Inter;
+    font-size: 30px;
+    color: map-get($colores, Blanco);
+    text-align: center;
+    left: auto;
+    right: auto;
+    border: dashed 1px white;
+
+}
+
+.mapa1 {
+    grid-area: mapa1;
+}
+
+.mapa2 {
+    grid-area: mapa2;
+}

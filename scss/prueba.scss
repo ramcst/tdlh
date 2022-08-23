@@ -1,0 +1,176 @@
+@import "variables";
+@import "home";
+@import "liminal";
+@import "stock";
+@import "talles";
+@import "nav";
+@import "contacto";
+
+.esconderInfo {
+    display: none;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+  
+
+.generalTitulo{
+    font-family: Inter;
+    font-size: 30px;
+    color: map-get($colores, Blanco);
+    text-align: center;
+    left: auto;
+    right: auto;
+}
+
+.subtituloGeneralDos {
+    @extend .generalTitulo;
+    border: dashed 1px map-get($colores, Blanco);
+}
+
+.subtituloGeneralTres{
+    @extend .generalTitulo;
+    font-size: 20px;
+    
+
+}
+
+.subtituloGeneralCuatro {
+    @extend .generalTitulo;
+    font-size: 15px;
+    
+}
+
+/*Animaciones*/
+
+@keyframes fadeIn {
+    0% {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+/*Media queries*/
+
+
+@media screen and (max-width: 768px) {
+
+    .contenedorIndex {
+        grid-template-areas:
+        "logo"
+        "parrafo"
+        "navegacion"
+        "instagram"
+        "link";
+    
+        justify-items: center;
+        justify-content: center;
+    }
+
+    .navegacion {
+        ul li {
+            display: block;
+        }
+    }
+
+    .imagenLogo {
+        width: 561px;
+        height: 181px;
+    }
+
+    .headerLiminal{
+        font-size: 60px;
+    }
+
+    .dibujoHeader{
+        width: 116px;
+        height: 92px;
+    }
+
+    
+    .liminalSpace__imagenesProducto{
+        margin-left: 7%;
+    }
+
+    .sticky{
+        position: sticky;
+        display: inline;
+        top: 0px;
+        font-size: 20px;
+    
+    }
+
+    .fila1 {
+        grid-area: fila1;
+        display: flex;
+        flex-direction: column;
+            
+    }
+    
+    .fila2 {
+        grid-area: fila2;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tallesImagen {
+        height: 728px;
+        width: 728px;
+        padding: 5px;
+        background-color: white;
+    
+    }
+    
+
+
+
+
+}
+
+
+@media screen and (max-width: 480px) {
+
+    .imagenLogo {
+        width: 374px;
+        height: 120px;
+    }
+
+    .headerLiminal{
+        font-size: 40px;
+    }
+
+    .dibujoHeader{
+        width: 77px;
+        height: 61px;
+    }
+
+    
+    .liminalSpace__imagenesProducto{
+        background-color: #1c1c1c;
+        padding: 5px;
+        height: 450px;
+        width: 450px;
+        margin-left: auto;
+    }
+    
+
+
+    .tallesImagen {
+        height: 428px;
+        width: 428px;
+        padding: 5px;
+        background-color: white;
+    
+    }
+
+    .mapaContacto {
+        height: 350px;
+        width: 420px;
+        padding: 5px;
+        background-color: white;
+    }
+
+}
+
+

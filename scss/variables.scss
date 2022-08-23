@@ -1,0 +1,13 @@
+//Variables
+
+$colores: (
+    Negro: #1c1c1c,
+    Blanco: white,
+    Gris: #555555
+); 
+
+@mixin tamaño ($alto, $ancho){
+    height: $alto;
+    width: $ancho;
+    
+}

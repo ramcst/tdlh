@@ -1,0 +1,57 @@
+@import "variables";
+
+
+.contenedorLiminal {
+    background-color:map-get($colores, Negro);
+    padding: 5px;
+    display: grid;
+    grid-template-areas:
+    "header header header"
+    "concepto concepto concepto"
+    "imagen imagen imagen";
+
+    justify-items: center;
+    justify-content: center;
+    animation: fadeIn 0.1s;
+    animation-timing-function: ease;
+
+}
+
+.headerLiminal{
+    grid-area: header;
+    font-family: Inter;
+    color: map-get($colores, Blanco);
+    font-size: 180px;
+}
+
+.concepto{
+    grid-area: concepto;
+    font-family: Inter;
+    color: map-get($colores, Blanco);
+    font-size: 20px;
+    text-align: center;
+}
+
+.imagenProducto{
+    grid-area: imagen;
+
+    
+}
+
+.liminalSpace__imagenesProducto{
+    background-color: map-get($colores, Negro);
+    padding: 5px;
+    @include tamaño (550px, 550px);
+}
+
+.logo__Navbar{
+    @include tamaño (35px, 100px);
+
+}
+
+.sticky{
+    position: sticky;
+    top: 0px;
+    font-size: 20px;
+
+}
